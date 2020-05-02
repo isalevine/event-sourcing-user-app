@@ -43,7 +43,7 @@ class Events::BaseEvent < ActiveRecord::Base
     klass.find(aggregate_id)
   end
 
-  def build_aggreggate
+  def build_aggregate
     public_send "build_#{aggregate_name}"
   end
 
