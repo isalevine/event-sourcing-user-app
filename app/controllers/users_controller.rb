@@ -6,7 +6,7 @@ class UsersController < ApplicationController
   end
 
   def destroy
-    Events::User::Destroyed.create(payload: user_params)
+    Events::User::Destroyed.create(user_id: user_params[:id], payload: user_params)
   end
 
   private def user_params
